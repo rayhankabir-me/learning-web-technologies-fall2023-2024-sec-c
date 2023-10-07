@@ -1,7 +1,7 @@
 <?php
-if(isset($_REQUEST['submit'])){
-    $name = $_REQUEST['name'];
-
+if(isset($_REQUEST['date'])){
+    $date = $_REQUEST['date'];
+    echo "Date: ".$date;
 }
 
 
@@ -13,13 +13,13 @@ if(isset($_REQUEST['submit'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form One - C</title>
+    <title>Form Three - B</title>
 </head>
 <body>
     <form action="#" method="post">
         <fieldset>
-            <legend>Name</legend>
-            <input type="text" name="name" value="<?php if(isset($name)){echo $name; }?>" id="">
+            <legend>Date</legend>
+            <input type="date" name="date" id="">
             <hr>
             <input type="submit" name="submit" value="Submit">
         </fieldset>

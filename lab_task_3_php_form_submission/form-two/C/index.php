@@ -1,6 +1,6 @@
 <?php
 if(isset($_REQUEST['submit'])){
-    $name = $_REQUEST['name'];
+    $email = $_REQUEST['email'];
 
 }
 
@@ -13,13 +13,13 @@ if(isset($_REQUEST['submit'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form One - C</title>
+    <title>Form One - B</title>
 </head>
 <body>
     <form action="#" method="post">
         <fieldset>
-            <legend>Name</legend>
-            <input type="text" name="name" value="<?php if(isset($name)){echo $name; }?>" id="">
+            <legend>Email</legend>
+            <input type="email" name="email" value="<?php if(isset($email)){echo $email; }?>" id="">
             <hr>
             <input type="submit" name="submit" value="Submit">
         </fieldset>
