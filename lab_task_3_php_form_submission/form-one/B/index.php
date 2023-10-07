@@ -1,3 +1,13 @@
+<?php
+if(isset($_REQUEST['submit'])){
+    $name = $_REQUEST['name'];
+    echo "Name: ".$name;
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +16,7 @@
     <title>Form One - B</title>
 </head>
 <body>
-    <form action="handler.php" method="post">
+    <form action="#" method="post">
         <fieldset>
             <legend>Name</legend>
             <input type="text" name="name" id="">
