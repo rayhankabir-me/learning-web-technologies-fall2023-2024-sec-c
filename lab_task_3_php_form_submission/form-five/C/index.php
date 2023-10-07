@@ -1,12 +1,15 @@
+
 <?php
 
-$gender = '';
-if(isset($_REQUEST['submit'])){
-    $gender = $_REQUEST['gender'];
+$degrees = [];
 
-}
+
+    if (isset($_REQUEST["degrees"])) {
+        $degrees = $_REQUEST["degrees"];
+    }
 
 ?>
+
 
 
 <!DOCTYPE html>
@@ -14,15 +17,16 @@ if(isset($_REQUEST['submit'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Four - C</title>
+    <title>Form Five - B</title>
 </head>
 <body>
-<form action="#" method="post">
+    <form action="#" method="post">
         <fieldset>
-            <legend>Gender</legend>
-            <input type="radio" name="gender" value="male" id="" <?php if($gender === "male"){ echo "checked"; }?>><label> Male</label>
-            <input type="radio" name="gender" value="female" id="" <?php if($gender === "female"){ echo "checked"; }?>><label> Female</label>
-            <input type="radio" name="gender" value="other" id="" <?php if($gender === "other"){ echo "checked"; }?>><label> Other</label>
+            <legend>Degree</legend>
+            <input type="checkbox" name="degrees[]" value="ssc" id="" <?php if(in_array('ssc', $degrees)) {echo "checked";} ?> ><label>SSC</label>
+            <input type="checkbox" name="degrees[]" value="hsc" id="" <?php if(in_array('hsc', $degrees)) {echo "checked";} ?> ><label>HSC</label>
+            <input type="checkbox" name="degrees[]" value="bsc" id="" <?php if(in_array('bsc', $degrees)) {echo "checked";} ?> ><label>BSc</label>
+            <input type="checkbox" name="degrees[]" value="msc" id="" <?php if(in_array('msc', $degrees)) {echo "checked";} ?> ><label>MSc</label>
             <hr>
             <input type="submit" name="submit" value="Submit">
         </fieldset>
