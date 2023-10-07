@@ -1,17 +1,15 @@
+
 <?php
-if(isset($_REQUEST['submit'])){
-    $gender = $_REQUEST['gender'];
-
-    if($gender === "male"){
-        echo "Gender: Male";
-    }elseif($gender === "female"){
-        echo "Gender: Female";
-    }elseif($gender === "other"){
-        echo "Gender: Other";
+    if(isset($_REQUEST['submit'])){
+        $degrees = $_REQUEST['degrees'];
+        
+        echo "Selected Degree:<br>";
+        foreach($degrees as $degree){
+            echo $degree."<br>";
+        }
     }
-}
-
 ?>
+
 
 
 <!DOCTYPE html>
@@ -19,15 +17,16 @@ if(isset($_REQUEST['submit'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Four - B</title>
+    <title>Form Five - B</title>
 </head>
 <body>
-<form action="#" method="post">
+    <form action="#" method="post">
         <fieldset>
-            <legend>Gender</legend>
-            <input type="radio" name="gender" value="male" id=""><label> Male</label>
-            <input type="radio" name="gender" value="female" id=""><label> Female</label>
-            <input type="radio" name="gender" value="other" id=""><label> Other</label>
+            <legend>Degree</legend>
+            <input type="checkbox" name="degrees[]" value="ssc" id=""><label>SSC</label>
+            <input type="checkbox" name="degrees[]" value="hsc" id=""><label>HSC</label>
+            <input type="checkbox" name="degrees[]" value="bsc" id=""><label>BSc</label>
+            <input type="checkbox" name="degrees[]" value="msc" id=""><label>MSc</label>
             <hr>
             <input type="submit" name="submit" value="Submit">
         </fieldset>
