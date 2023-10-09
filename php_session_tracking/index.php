@@ -9,7 +9,7 @@
 
     <table border="1" width="100%">
         <tr>
-            <td>X Company</td>
+            <td><a href="index.php"><h2>X Company</h2></a></td>
             <td align="right"><a href="index.php">Home</a> | <a href="login.php">Login</a> | <a href="registration.php">Registration</a></td>
         </tr>
         <tr>

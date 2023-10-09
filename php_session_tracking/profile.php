@@ -42,7 +42,7 @@ if(isset($_SESSION['user_login']) && $_SESSION['user_login'] == 'login_success')
                     <li><a href="profile.php">View Profile</a></li>
                     <li><a href="edit_profile.php">Edit Profile</a></li>
                     <li><a href="edit_profile.php">Edit Profile Picture</a></li>
-                    <li><a href="edit_profile.php">Change Password</a></li>
+                    <li><a href="change_password.php">Change Password</a></li>
                     <li><a href="logout.php">Logout</a></li>
                 </ul>
             </td  colspan="3">
