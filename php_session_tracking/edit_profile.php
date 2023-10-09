@@ -67,7 +67,7 @@ if(isset($_REQUEST['submit'])){
 
     <table border="1" width="100%">
         <tr>
-            <td>X Company</td>
+            <td><a href="index.php"><h2>X Company</h2></a></td>
             <td align="right">Logged in as <a href="profile.php"><?php echo $cookie_name; ?></a> | <a href="logout.php">Logout</a></td>
         </tr>
         <tr>
