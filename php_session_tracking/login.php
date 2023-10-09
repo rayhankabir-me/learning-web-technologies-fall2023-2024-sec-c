@@ -16,7 +16,11 @@
 
     $username = $_REQUEST['username'];
     $password = $_REQUEST['password'];
-    $remember_me = $_REQUEST['remember_me'];
+    if(isset($_REQUEST['remember_me'])){
+        $remember_me = $_REQUEST['remember_me'];
+    }else{
+        $remember_me = '';
+    }
 
 
     if($username == ''){

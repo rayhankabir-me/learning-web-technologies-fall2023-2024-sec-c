@@ -29,7 +29,7 @@ if(isset($_SESSION['user_login']) && $_SESSION['user_login'] == 'login_success')
 
     <table border="1" width="100%">
         <tr>
-            <td>X Company</td>
+            <td><a href="index.php"><h2>X Company</h2></a></td>
             <td align="right">Logged in as <a href="profile.php"><?php echo $name; ?></a> | <a href="logout.php">Logout</a></td>
         </tr>
         <tr>
