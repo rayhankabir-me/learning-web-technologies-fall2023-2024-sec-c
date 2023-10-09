@@ -1,5 +1,12 @@
 <?php
 
+    session_start();
+
+    if(isset($_SESSION['user_login']) && $_SESSION['user_login'] == 'login_success'){
+
+        header('location: dashboard.php');
+    }
+
 
  if(isset($_REQUEST['submit'])){
 
