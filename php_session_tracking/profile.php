@@ -5,6 +5,9 @@ session_start();
 if(isset($_SESSION['user_login']) && $_SESSION['user_login'] == 'login_success'){
 
     $name = $_COOKIE['name'];
+    $email = $_COOKIE['email'];
+    $gender = $_COOKIE['gender'];
+    $date_of_birth = $_COOKIE['date_of_birth'];
     
 }else{
     header('location: login.php');
@@ -45,9 +48,22 @@ if(isset($_SESSION['user_login']) && $_SESSION['user_login'] == 'login_success')
             </td  colspan="3">
             <td> 
                 <br>
-                <h2> Welcome <?php echo $name; ?></h2>
                 <br>
-                <br>
+                <fieldset>
+                    <legend>Profile</legend>
+                    Name: <?php echo $name; ?><br>
+                    <hr>
+                    Email: <?php echo $email; ?><br>
+                    <hr> 
+                    Gender: <?php echo $gender; ?><br>
+                    <hr>
+                    Date of Birth: <?php echo $date_of_birth; ?><br>
+                    <hr>
+                    Profile Picture: <br>
+                    <img src="https://res.cloudinary.com/demo/image/gravatar/e3264cf16f34ecd3c7c564f5668cbc1e.jpg" alt="">
+                    <hr>
+                    <a href="edit_profile.php">Edit Profile</a>
+                </fieldset>
                 <br>
                 <br>
             </td>

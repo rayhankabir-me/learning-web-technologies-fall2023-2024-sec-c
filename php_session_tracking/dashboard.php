@@ -45,9 +45,8 @@ if(isset($_SESSION['user_login']) && $_SESSION['user_login'] == 'login_success')
             </td  colspan="3">
             <td> 
                 <br>
+                <br>
                 <h2> Welcome <?php echo $name; ?></h2>
-                <br>
-                <br>
                 <br>
                 <br>
             </td>
