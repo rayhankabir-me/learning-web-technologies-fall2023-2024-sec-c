@@ -10,7 +10,7 @@
     <table border="1" width="100%">
         <tr>
             <td>X Company</td>
-            <td align="right"><a href="">Home</a> | <a href="">Login</a> | <a href="registration.php">Registration</a></td>
+            <td align="right"><a href="index.php">Home</a> | <a href="">Login</a> | <a href="registration.php">Registration</a></td>
         </tr>
         <tr>
             <td colspan="3">
