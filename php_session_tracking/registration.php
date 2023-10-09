@@ -51,6 +51,8 @@
         setcookie('c_password', $c_password, time() + (86400 * 30), "/");
         setcookie('gender', $gender, time() + (86400 * 30), "/");
         setcookie('date_of_birth', $date_of_birth, time() + (86400 * 30), "/");
+
+        header('location: login.php');
     }
     
 
