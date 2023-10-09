@@ -15,7 +15,9 @@
         <tr>
             <td colspan="3">
                 <br>
-                Welcome To X Company
+                <br>
+                <br>
+                <h2>X Company</h2>
                 <br>
                 <br>
                 <br>

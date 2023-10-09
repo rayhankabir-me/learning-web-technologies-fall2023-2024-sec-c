@@ -8,7 +8,13 @@
     $username = $_REQUEST['username'];
     $password = $_REQUEST['password'];
     $c_password = $_REQUEST['c_password'];
-    $gender = $_REQUEST['gender'];
+
+    if(isset($_REQUEST['gender'])){
+        $gender = $_REQUEST['gender'];
+    }else{
+        $gender = '';
+    }
+
     $date_of_birth = $_REQUEST['date_of_birth'];
 
     if($name == ''){
