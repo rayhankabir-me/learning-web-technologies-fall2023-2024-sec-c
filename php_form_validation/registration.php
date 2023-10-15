@@ -51,22 +51,19 @@ include_once('controller/functions.php');
     }
 
     if($error_message === ''){
-        echo "Working Nice!";
+        
+        setcookie('name', $name, time() + (86400 * 30), "/");
+        setcookie('email', $email, time() + (86400 * 30), "/");
+        setcookie('username', $username, time() + (86400 * 30), "/");
+        setcookie('password', $password, time() + (86400 * 30), "/");
+        setcookie('c_password', $c_password, time() + (86400 * 30), "/");
+        setcookie('gender', $gender, time() + (86400 * 30), "/");
+        setcookie('date_of_birth', $date_of_birth, time() + (86400 * 30), "/");
+
+        header('location: login.php');
     }
 
-    // if ($name !== '' && $email !== '' && $username !== '' && $password !== '' && $c_password !== '' && $c_password == $password && $gender !== '' && $date_of_birth !== '') {
 
-
-    //     setcookie('name', $name, time() + (86400 * 30), "/");
-    //     setcookie('email', $email, time() + (86400 * 30), "/");
-    //     setcookie('username', $username, time() + (86400 * 30), "/");
-    //     setcookie('password', $password, time() + (86400 * 30), "/");
-    //     setcookie('c_password', $c_password, time() + (86400 * 30), "/");
-    //     setcookie('gender', $gender, time() + (86400 * 30), "/");
-    //     setcookie('date_of_birth', $date_of_birth, time() + (86400 * 30), "/");
-
-    //     header('location: login.php');
-    // }
     
 
 
