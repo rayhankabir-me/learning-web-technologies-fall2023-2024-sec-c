@@ -4,6 +4,14 @@
  include_once('controller/functions.php');
 
 
+ session_start();
+
+ if(isset($_SESSION['user_login']) && $_SESSION['user_login'] == 'login_success'){
+
+     header('location: profile.php');
+ }
+
+
 
  if(isset($_REQUEST['submit'])){
 
@@ -39,7 +47,23 @@
 
     if($error_message === ''){
 
-        echo "Passed the Test";
+        if (isset($_COOKIE['username']) && isset($_COOKIE['password'])) {
+        
+            $cookie_username = $_COOKIE['username'];
+            $cookie_password = $_COOKIE['password'];
+    
+            if($username == $cookie_username && $password == $cookie_password){
+                
+                session_start();
+                $_SESSION["user_login"] = "login_success";
+                header('location: profile.php');
+    
+            }else{
+                $invalid_login = "Invalid login details! Try Again!";
+            }
+        }else{
+            $login_failed = "No User Exits. Please register!";
+        }
     }
 
 
