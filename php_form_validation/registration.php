@@ -23,21 +23,26 @@ include_once('controller/functions.php');
     if($name == ''){
         $error_message .= "Your must fill Name! <br>";
     }elseif (name_validation($name) === false) {
-        $error_message .= "Invalid Name Format!";
+        $error_message .= "Invalid Name Format! <br>";
     }
     if($email == ''){
         $error_message .= "Your must fill Email! <br>";
+    }elseif (email_validation($email) === false) {
+        $error_message .= "Invalid Email Format! <br>";
     }
     if($username == ''){
         $error_message .= "Your must fill User Name! <br>";
+    }elseif (username_validation($username) === false) {
+        $error_message .= "Invalid User Name Format! <br>";
     }
     if($password == ''){
         $error_message .= "Your must fill Password! <br>";
+    }elseif (password_validation($password) === false) {
+        $error_message .= "Wrong Password Format! <br>";
+    }elseif ($c_password !== $password) {
+        $error_message .= "Password Doesn't Match! <br>";
     }
 
-    if($c_password == '' || $c_password !== $password){
-        $error_message .= "Your passsword doesn't Match! <br>";
-    }
     if($gender == ''){
         $error_message .= "Your must fill Gender! <br>";
     }
@@ -45,6 +50,9 @@ include_once('controller/functions.php');
         $error_message .= "You must fill Date of Birth! <br>";
     }
 
+    if($error_message === ''){
+        echo "Working Nice!";
+    }
 
     // if ($name !== '' && $email !== '' && $username !== '' && $password !== '' && $c_password !== '' && $c_password == $password && $gender !== '' && $date_of_birth !== '') {
 
