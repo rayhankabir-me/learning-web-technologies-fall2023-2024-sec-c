@@ -1,9 +1,10 @@
 <?php
+
 session_start();
 
-if(isset($_SESSION['user_login']) && $_SESSION['user_login'] == 'login_success'){
+if(!isset($_SESSION['user_login']) && $_SESSION['user_login'] !== 'login_success'){
 
-    header('location: profile.php');
+    header('location: login.php');
 }
 
 ?>
