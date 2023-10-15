@@ -51,7 +51,7 @@ include_once('controller/functions.php');
     }
 
     if($error_message === ''){
-        
+
         setcookie('name', $name, time() + (86400 * 30), "/");
         setcookie('email', $email, time() + (86400 * 30), "/");
         setcookie('username', $username, time() + (86400 * 30), "/");
@@ -83,7 +83,7 @@ include_once('controller/functions.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Registration</title>
 </head>
 <body>
 
