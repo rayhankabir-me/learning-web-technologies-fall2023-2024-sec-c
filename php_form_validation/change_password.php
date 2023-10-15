@@ -1,9 +1,11 @@
 <?php
 
+
+include_once('controller/functions.php');
+
 session_start();
 
 if(isset($_SESSION['user_login']) && $_SESSION['user_login'] == 'login_success'){
-    $cookie_name = $_COOKIE['name'];
     $cookie_password = $_COOKIE['password'];
     
 }else{
@@ -21,16 +23,24 @@ if(isset($_REQUEST['submit'])){
 
     if($current_password == ''){
         $error_message .= "Your must enter Current Password! <br>";
+    }elseif (password_validation($current_password) === false) {
+        $error_message .= "Invalid Password Formmat!";
     }
     if($new_password == ''){
         $error_message .= "Your must fill New Password! <br>";
+    }elseif (password_validation($new_password) === false) {
+        $error_message .= "Invalid New Password Format!";
     }
     if($retype_password == ''){
         $error_message .= "Your must fill Retype Password! <br>";
+    }elseif (password_validation($retype_password) === false) {
+        $error_message .= "Invalid Re Type Password Format!";
+    }elseif ($new_password !== $retype_password) {
+        $error_message .= "New Password and Confirm Password Not Match!";
     }
 
 
-    if ($current_password !== '' && $new_password !== '' && $retype_password !== '' && $current_password == $cookie_password) {
+    if ($current_password == $cookie_password && $error_message == '') {
 
         setcookie('password', $new_password, time() + (86400 * 30), "/");
 
