@@ -1,9 +1,5 @@
 <?php
 
-$my_characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.-_';
-
-
-
 
 
    function username_validation($user_name){
@@ -16,7 +12,7 @@ $my_characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
         $usernameValid = false;
     } else {
         for ($i = 0; $i < strlen($user_name); $i++) {
-            if (strpos($allowedCharacters, $username[$i]) === false) {
+            if (strpos($my_characters, $user_name[$i]) === false) {
                 $usernameValid = false;
                 
             }
@@ -24,7 +20,7 @@ $my_characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
     }
  
     if (!$usernameValid) {
-        $error_message = 'Invalid username Format';
+        return false;
     }
 
    }

@@ -1,6 +1,9 @@
 <?php
 
 
+ include_once('controller/functions.php');
+
+
 
  if(isset($_REQUEST['submit'])){
 
@@ -8,6 +11,9 @@
 
     $username = $_REQUEST['username'];
     $password = $_REQUEST['password'];
+
+    
+
     if(isset($_REQUEST['remember_me'])){
         $remember_me = $_REQUEST['remember_me'];
     }else{
@@ -22,8 +28,13 @@
         $error_message .= "Your must fill Password! <br>";
     }
 
+    if(username_validation($username) === false){
+        $error_message .= 'Invalid username Format';
+    }
+
+
     
-    abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.-_'
+    
 
 
 
