@@ -22,7 +22,7 @@ include_once('controller/functions.php');
 
     if($name == ''){
         $error_message .= "Your must fill Name! <br>";
-    }elseif (username_validation($name) === false) {
+    }elseif (name_validation($name) === false) {
         $error_message .= "Invalid Name Format!";
     }
     if($email == ''){
@@ -46,19 +46,19 @@ include_once('controller/functions.php');
     }
 
 
-    if ($name !== '' && $email !== '' && $username !== '' && $password !== '' && $c_password !== '' && $c_password == $password && $gender !== '' && $date_of_birth !== '') {
+    // if ($name !== '' && $email !== '' && $username !== '' && $password !== '' && $c_password !== '' && $c_password == $password && $gender !== '' && $date_of_birth !== '') {
 
 
-        setcookie('name', $name, time() + (86400 * 30), "/");
-        setcookie('email', $email, time() + (86400 * 30), "/");
-        setcookie('username', $username, time() + (86400 * 30), "/");
-        setcookie('password', $password, time() + (86400 * 30), "/");
-        setcookie('c_password', $c_password, time() + (86400 * 30), "/");
-        setcookie('gender', $gender, time() + (86400 * 30), "/");
-        setcookie('date_of_birth', $date_of_birth, time() + (86400 * 30), "/");
+    //     setcookie('name', $name, time() + (86400 * 30), "/");
+    //     setcookie('email', $email, time() + (86400 * 30), "/");
+    //     setcookie('username', $username, time() + (86400 * 30), "/");
+    //     setcookie('password', $password, time() + (86400 * 30), "/");
+    //     setcookie('c_password', $c_password, time() + (86400 * 30), "/");
+    //     setcookie('gender', $gender, time() + (86400 * 30), "/");
+    //     setcookie('date_of_birth', $date_of_birth, time() + (86400 * 30), "/");
 
-        header('location: login.php');
-    }
+    //     header('location: login.php');
+    // }
     
 
 

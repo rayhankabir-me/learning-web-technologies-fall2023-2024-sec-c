@@ -33,7 +33,7 @@
 
         $nameValid = true;
     
-        $nameCharacters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789. ';
+        $nameCharacters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ. ';
      
         if (strlen($name) < 2) {
             $nameValid = false;
@@ -77,5 +77,28 @@
     }
 
    }
+
+
+
+      //email validation function
+      function email_validation($email){
+
+        $emailValid = true;
+    
+        $emailsCharacters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.@';
+     
+            for ($i = 0; $i < strlen($email); $i++) {
+                if (strpos($emailsCharacters, $email[$i]) === false) {
+                    $emailValid = false;
+                    
+                }
+            }
+
+     
+        if (!$emailValid) {
+            return false;
+        }
+    
+       }
 ?>
 
