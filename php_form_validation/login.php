@@ -23,14 +23,23 @@
 
     if($username == ''){
         $error_message .= "Your must fill User Name! <br>";
+
+
+    }elseif (username_validation($username) === false) {
+        $error_message .= 'Invalid username Format!';
     }
+    
     if($password == ''){
         $error_message .= "Your must fill Password! <br>";
+
+
+    }elseif (password_validation($password) === false) {
+        $error_message .= "Invalid Password Format!";
     }
 
-    if(username_validation($username) === false){
-        $error_message .= 'Invalid username Format';
-    }
+
+
+
 
 
     
