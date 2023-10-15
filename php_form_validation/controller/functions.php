@@ -26,6 +26,33 @@
 
    }
 
+
+      //Name validation function
+
+      function name_validation($name){
+
+        $nameValid = true;
+    
+        $nameCharacters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789. ';
+     
+        if (strlen($name) < 2) {
+            $nameValid = false;
+        } else {
+            for ($i = 0; $i < strlen($name); $i++) {
+                if (strpos($nameCharacters, $name[$i]) === false) {
+                    $nameValid = false;
+                    
+                }
+            }
+        }
+     
+        if (!$nameValid) {
+            return false;
+        }
+    
+       }
+
+
    //password validation function
    function password_validation($password){
 

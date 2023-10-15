@@ -37,6 +37,12 @@
         $error_message .= "Invalid Password Format!";
     }
 
+    if($error_message === ''){
+
+        echo "Passed the Test";
+    }
+
+
 
 
 
