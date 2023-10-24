@@ -24,7 +24,10 @@
         return $result;
     }
     function getUser($id){
-
+        $conneciton = db_connection();
+        $sql = "SELECT * FROM users WHERE id=$id";
+        $result = mysqli_query($conneciton, $sql);
+        return $result;
     }
 
     function createUser(){
@@ -37,7 +40,15 @@
     }
 
     function deleteUser($id){
+    
+        $conneciton = db_connection();
+        $sql = "DELETE FROM users WHERE id={$id}";
 
+        if (mysqli_query($conneciton, $sql)) {
+            return true;
+        } else {
+            return false;
+        }
 
     } 
 
