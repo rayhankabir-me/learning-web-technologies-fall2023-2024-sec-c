@@ -34,8 +34,15 @@
 
     }
 
-    function updateUser($id){
-
+    function updateUser($id, $submitted_data){
+        $conneciton = db_connection();
+        $sql = "UPDATE users SET name='{$submitted_data['name']}', username='{$submitted_data['username']}', email='{$submitted_data['email']}', gender='{$submitted_data['gender']}', date_of_birth='{$submitted_data['date_of_birth']}' WHERE id = $id";
+        $result = mysqli_query($conneciton, $sql);
+        if($result){
+            return true;
+        }else{
+            return false;
+        }
 
     }
 
