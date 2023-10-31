@@ -29,8 +29,11 @@ function get_all_users(){
 
 }
 
-function get_user($id){
-
+function get_user($user_id){
+    $conneciton = get_connection();
+    $sql = "SELECT name FROM users WHERE user_id = '{$user_id}'";
+    $result = mysqli_query($conneciton, $sql);
+    return $result;
 
 }
 

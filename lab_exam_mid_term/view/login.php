@@ -26,11 +26,11 @@
 
 		if($login == true && $result['user_type'] == 'admin'){
 			session_start();
-			$_SESSION["username"] = $username;
+			$_SESSION["user_id"] = $user_id;
 			header("Location: admin_home.php");
 		}elseif($login == true && $result['user_type'] == 'user'){
 			session_start();
-			$_SESSION["username"] = $username;
+			$_SESSION["user_id"] = $user_id;
 			header("Location: user_home.php");
 		}
 	}

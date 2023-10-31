@@ -1,1 +1,29 @@
-<center>	<h1>Welcome Bob!</h1>	<a href="profile.html">Profile</a>	<br/>	<a href="change_password.html">Change Password</a>	<br/>	<a href="view_users.html">View Users</a>	<br/>	<a href="login.html">Logout</a></center>
+<?php
+
+require_once('../model/usersModel.php');
+session_start();
+
+if (!isset($_SESSION["user_id"])) {
+    header("Location: login.php");
+}
+
+$user_id = $_SESSION["user_id"];
+
+
+$name = get_user($user_id);
+$result = $name->fetch_assoc();
+
+?>
+
+
+
+<center>
+	<h1>Welcome <?php echo $result['name']; ?>!</h1>
+	<a href="profile.php">Profile</a>
+	<br/>
+	<a href="change_password.php">Change Password</a>
+	<br/>
+	<a href="view_users.php">View Users</a>
+	<br/>
+	<a href="../controller/logout.php">Logout</a>
+</center>
