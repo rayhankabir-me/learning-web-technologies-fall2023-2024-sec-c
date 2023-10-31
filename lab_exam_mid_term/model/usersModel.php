@@ -1,7 +1,14 @@
 <?php
 require_once('db.php');
 
+function get_user_data($user_id){
 
+    $conneciton = get_connection();
+    $sql = "SELECT * FROM users WHERE user_id = '{$user_id}'";
+    $result = mysqli_query($conneciton, $sql);
+    return $result;
+
+}
 function userLogin($user_id, $password){
 
     $conneciton = get_connection();
