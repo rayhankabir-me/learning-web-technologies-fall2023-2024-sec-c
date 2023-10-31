@@ -3,12 +3,9 @@ require_once('../model/usersModel.php');
 
 
 $data = get_all_users();
-$result = $data->fetch_assoc();
 
-echo var_dump($result);
-foreach ($result as $value) {
-	echo $value;
-}
+
+
 ?>
 
 
@@ -18,19 +15,18 @@ foreach ($result as $value) {
 		<tr>
 			<td>ID</td><td>NAME</td><td>USER TYPE</td>
 		</tr>
-		<tr>
-			<td>15-10101-1</td><td>Bob</td><td>Admin</td>
-		</tr>
-		<tr>
-			<td>16-10102-2</td><td>Anne</td><td>User</td>
-		</tr>
-		<tr>
-			<td>16-10103-2</td><td>Kent</td><td>User</td>
-		</tr>
-		<tr>
-			<td>16-10104-3</td><td>James</td><td>Admin</td>
-		</tr>
-		<tr>
+		<?php
+			while ($row = $data->fetch_assoc()) {
+				?>
+					<tr>
+						<td><?php echo $row['user_id']; ?></td><td><?php echo $row['name']; ?></td><td><?php echo $row['user_type']; ?></td>
+					</tr>
+
+			<?php
+			}
+		?>
+
+
 			<td colspan="3" align="right">
 				<a href="home.html">Go Home</a>
 			</td>
