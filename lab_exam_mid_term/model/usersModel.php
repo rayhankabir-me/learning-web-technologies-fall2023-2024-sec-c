@@ -33,6 +33,10 @@ function get_user_type($user_id){
 
 function get_all_users(){
 
+    $conneciton = get_connection();
+    $sql = "SELECT * FROM users";
+    $result = mysqli_query($conneciton, $sql);
+    return $result;
 
 }
 
