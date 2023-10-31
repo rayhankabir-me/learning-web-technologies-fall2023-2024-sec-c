@@ -85,7 +85,7 @@ if(isset($_REQUEST['submit'])){
 					<p><?php if(isset($error_message)){echo $error_message;} ?></p>
                 	<p><?php if(isset($success_message)){echo $success_message;} ?></p>
 					<input type="submit" value="Sign Up" name="submit">
-					<a href="login.html">Sign In</a>
+					<a href="login.php">Sign In</a>
 				</fieldset>
 			</td>
 		</tr>                                

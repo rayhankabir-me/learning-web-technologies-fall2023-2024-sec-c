@@ -2,6 +2,28 @@
 require_once('db.php');
 
 
+function userLogin($user_id, $password){
+
+    $conneciton = get_connection();
+    
+    $sql = "SELECT * FROM users WHERE user_id = '{$user_id}' AND password = '{$password}'";
+    $result = mysqli_query($conneciton, $sql);
+    $count = mysqli_num_rows($result);
+
+    if($count == 1){
+        return true;
+    }else{
+        return false;
+    }
+}
+function get_user_type($user_id){
+
+    $conneciton = get_connection();
+    $sql = "SELECT user_type FROM users WHERE user_id = '{$user_id}'";
+    $result = mysqli_query($conneciton, $sql);
+    return $result;
+}
+
 function get_all_users(){
 
 
