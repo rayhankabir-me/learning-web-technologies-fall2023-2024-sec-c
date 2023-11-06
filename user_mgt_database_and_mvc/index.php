@@ -7,6 +7,6 @@
 </head>
 <body>
     <a href="view/registration.php">Registration</a>
-    <a href="view/login.php">Login</a>
+    <a href="view/login.php">Login Page</a>
 </body>
 </html>
