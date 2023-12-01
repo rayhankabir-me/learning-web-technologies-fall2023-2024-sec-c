@@ -51,11 +51,11 @@ if($action == 'register_user'){
      $result = create_user($submited_data);
      if($result){
          echo "Registration Success! <a href='login.php'>Login Now</a> <br>";
-     }else{
-        echo $error_message;
      }
      
-    }
+    }else{
+        echo $error_message;
+     }
 
 
 
